@@ -47,10 +47,46 @@ class ModelTrainer:
                "KNeighborsClassifier": KNeighborsClassifier(),
                "SVC": SVC(),
             }
+            param_grid = {
+                "LogisticRegression": {
+                            "penalty": ["l2"],
+                            "C": [0.1, 1.0, 10.0]
+            },
+                "DecisionTreeClassifier": {
+                            "max_depth": [None, 5, 10],
+                            "min_samples_split": [2, 5, 10]
+            },
+                "RandomForestClassifier": {
+                            "n_estimators": [100, 200, 300],
+                            "max_depth": [None, 5, 10]
+            },
+                "XGBClassifier": {
+                            "learning_rate": [0.1, 0.01, 0.001],
+                            "max_depth": [3, 5, 10]
+            },
+                "GaussianNB": {},
+                "GradientBoostingClassifier": {
+                            "learning_rate": [0.1, 0.01, 0.001],
+                            "n_estimators": [100, 200, 300],
+                            "max_depth": [3, 5, 10]
+            },
+                "LGBMClassifier": {
+                            "learning_rate": [0.1, 0.01, 0.001],
+                            "n_estimators": [100, 200, 300],
+                            "max_depth": [3, 5, 10]
+            },
+                "KNeighborsClassifier": {
+                            "n_neighbors": [3, 5, 10]
+            },
+                "SVC": {
+                            "C": [0.1, 1.0, 10.0],
+                            "kernel": ["linear", "rbf"]
+            }
+        }
             
 
             model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
-                                             models=models)
+                                             models=models,param=param_grid)
             
             ## To get best model score from dict
             best_model_score = max(sorted(model_report.values()))
