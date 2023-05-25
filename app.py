@@ -42,7 +42,11 @@ def predict_datapoint():
         print("Mid Prediction")
         results=predict_pipeline.predict(pred_df)
         print("after Prediction",results)
-        return render_template('home.html',results=results[0])
+        if results[0]==1.0:
+            loan='Loan_Status:Yes'
+        else:
+            loan='Loan_Status:No'
+        return render_template('home.html',results=loan)
     
 
 if __name__=="__main__":

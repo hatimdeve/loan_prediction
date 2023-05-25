@@ -1,0 +1,54 @@
+
+    /* Styles pour le formulaire */
+    .login {
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+    }
+
+    .login h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .login form {
+        margin-bottom: 20px;
+    }
+
+    .login label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .login select,
+    .login input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    .login input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+    .login input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    .login h2 {
+        text-align: center;
+        font-size: 18px;
+    }
+

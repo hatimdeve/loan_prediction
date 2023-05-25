@@ -1,7 +1,10 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    </head>
     <body>
         <div class="login">
-           <h1>Loan Prediction</h1>
+           
        
            <form action="{{ url_for('predict_datapoint')}}" method="post">
             <h1>
@@ -82,27 +85,27 @@
             <div class="mb-3">
                 <label class="form-label">ApplicantIncome</label>
                 <input class="form-control" type="number" name="ApplicantIncome"
-                    placeholder="Enter your ApplicantIncome" min='0' max='100' />
+                    placeholder="Enter your ApplicantIncome"  />
             </div>
             <div class="mb-3">
                 <label class="form-label">CoapplicantIncome</label>
                 <input class="form-control" type="number" name="CoapplicantIncome"
-                    placeholder="Enter CoapplicantIncome" min='0' max='100' />
+                    placeholder="Enter CoapplicantIncome"  />
             </div>
             <div class="mb-3">
                 <label class="form-label">LoanAmount</label>
                 <input class="form-control" type="number" name="LoanAmount"
-                    placeholder="Enter LoanAmount" min='0' max='100' />
+                    placeholder="Enter LoanAmount"  />
             </div>
             <div class="mb-3">
                 <label class="form-label">Loan_Amount_Term</label>
                 <input class="form-control" type="number" name="Loan_Amount_Term"
-                    placeholder="Enter Loan_Amount_Term" min='0' max='100' />
+                    placeholder="Enter Loan_Amount_Term"  />
             </div>
             <div class="mb-3">
                 <label class="form-label">Credit_History</label>
                 <input class="form-control" type="number" name="Credit_History"
-                    placeholder="Enter Credit_History" min='0' max='100' />
+                    placeholder="Enter Credit_History"  />
             </div>
             <div class="mb-3">
                 <label class="form-label">Property_Area</label>
